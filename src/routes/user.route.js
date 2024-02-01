@@ -15,6 +15,22 @@ router.put('/reset', user_controller.reset_password);
 router.delete('/delete_user', auth, user_controller.delete_user);
 
 router.post('/post', auth, upload, post_controller.createPost);
+
+/**
+ * @swagger
+ * /api/get:
+ *   get:
+ *     summary: This API is used to check
+ *     description: Get something
+ *     responses:
+ *       200:
+ *         description: Success
+ */
+
+
+router.get('/get', (req, res) => {
+    res.send("hello bhsbh ");
+});
 router.get('/get_all_post', post_controller.get_all_Post);
 router.get('/get_post', post_controller.get_Post);
 router.get('/get_user_post', post_controller.get_user_post);
